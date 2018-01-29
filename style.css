@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::selection {
+  background: #06090d;
+}
+body {
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  background-color: #263240;
+}
+.navbar {
+  width: 60vh;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+.title h1 {
+  padding: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 5em;
+  animation: slideInLeft 0.8s ease-out;
+  letter-spacing: 0.25rem;
+  margin: 1rem;
+}
+h2 {
+  font-weight: 300;
+  color: #fff;
+  font-size: 5em;
+}
+
+h3 {
+  font-weight: 300;
+  color: #fff;
+  font-size: 3rem;
+}
+p {
+  color: #717880;
+}
+
+ul {
+  list-style: none;
+  color: #fff;
+  padding: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-image {
+  background-image: url("img/title.png");
+  height: 43vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-image .hero-svg {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  transform: scale(2);
+}
+
+.title {
+  text-align: center;
+}
+.navbar li {
+  background-color: #0d131a;
+  padding: 1em;
+  letter-spacing: 0.35rem;
+  animation: slideInLeft 0.8s ease-out;
+  text-align: center;
+}
+
+.not-allowed{
+	cursor: not-allowed;
+}
+
+.navbar a {
+  font-size: 2.5em;
+  font-weight: 700;
+  align-content: center;
+}
+
+.navbar li:hover {
+  transition-duration: 0.2s;
+  background-color: #0f5079;
+}
+
+/* aircraft */
+
+#aircraft .container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
+  background-color: #263240;
+  height: 100vh;
+}
+
+#aircraft nav {
+  background: #474f59;
+}
+#aircraft .logo {
+  grid-area: 1;
+  background-color: #0f5079;
+}
+#aircraft .top-nav {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  background: linear-gradient(to right, rgba(15, 80, 121, 1), rgba(0, 0, 0, 0));
+  align-items: center;
+  justify-content: center;
+}
+#aircraft .top-nav a {
+  font-size: 2.75rem;
+  font-weight: 300;
+  justify-content: space-between;
+  margin: 4rem;
+}
+#aircraft .top-nav-text {
+  justify-content: center;
+}
+#aircraft .left-nav {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #474f59, rgba(0, 0, 0, 0));
+  grid-row: 2/3;
+  grid-column: 1;
+  justify-content: flex-start;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.left-nav a{
+	color: #717880;
+}
+.left-nav .active a{
+	color: #06090d;
+}
+#aircraft .aircraft-nav {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 1rem;
+  line-height: 3rem;
+}
+#aircraft .scenery-nav {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 5rem;
+  line-height: 3rem;
+}
+#aircraft .plugin-nav {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  line-height: 3rem;
+}
+
+#aircraft .info {
+  grid-row: 2;
+  grid-column: 2;
+  display: grid;
+  grid-row-gap: 4rem;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(12, auto);
+}
+
+.info img {
+  width: 500px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  height: fit-content;
+  width: fit-content;
+}
+.card a:hover {
+  transition-duration: 0.1s;
+  opacity: 0.55;
+}
+.card1 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.card2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+.card3 {
+  grid-row: 3;
+  grid-column: 1;
+}
+.card4 {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.header-airliners {
+  grid-row: 4;
+}
+.card5 {
+  grid-row: 5;
+  grid-column: 1;
+}
+.card6 {
+  grid-row: 5;
+  grid-column: 2;
+}
+
+/* ANIMATIONS */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 830px) {
+  .navbar a,
+  li {
+    margin: 0 auto;
+  }
+
+  body {
+    font-size: 10px;
+    overflow: hidden;
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .hero-image {
+    background: url("img/titlesmall.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: scroll;
+  }
+  body h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  body h1 {
+    font-size: 3rem;
+  }
+}
